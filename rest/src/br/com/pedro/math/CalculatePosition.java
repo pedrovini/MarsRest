@@ -36,27 +36,27 @@ public class CalculatePosition {
 		
 		switch (position) {
 		case N:
-			newPosition = mapa.get(MapKeys.POSITION_X.name())+1;
+			newPosition = mapa.get(MapKeys.POSITION_Y.name())+1;
 			if(validPosition(newPosition)){				
-				mapa.put(MapKeys.POSITION_X.name(), newPosition);			
+				mapa.put(MapKeys.POSITION_Y.name(), newPosition);			
 			}
 			break;
 		case S:
-			newPosition = mapa.get(MapKeys.POSITION_X.name())-1;
-			if(validPosition(newPosition)){				
-				mapa.put(MapKeys.POSITION_X.name(), newPosition);			
-			}
-			break;
-		case W:
 			newPosition = mapa.get(MapKeys.POSITION_Y.name())-1;
 			if(validPosition(newPosition)){				
 				mapa.put(MapKeys.POSITION_Y.name(), newPosition);			
 			}
 			break;
-		case E:
-			newPosition = mapa.get(MapKeys.POSITION_Y.name())+1;
+		case W:
+			newPosition = mapa.get(MapKeys.POSITION_X.name())-1;
 			if(validPosition(newPosition)){				
-				mapa.put(MapKeys.POSITION_Y.name(), newPosition);			
+				mapa.put(MapKeys.POSITION_X.name(), newPosition);			
+			}
+			break;
+		case E:
+			newPosition = mapa.get(MapKeys.POSITION_X.name())+1;
+			if(validPosition(newPosition)){				
+				mapa.put(MapKeys.POSITION_X.name(), newPosition);			
 			};
 			break;
 			
